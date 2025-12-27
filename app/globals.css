@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --surface: 12 10% 12%;
+  --surface-strong: 213 34% 12%;
+  --accent: 199 89% 60%;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: hsl(var(--surface));
+  --color-foreground: 210 40% 96%;
+  --color-accent: hsl(var(--accent));
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(94, 234, 212, 0.08), transparent 45%),
+    radial-gradient(circle at 20% 120%, rgba(56, 189, 248, 0.08), transparent 55%),
+    hsl(var(--surface));
+  color: rgb(226 232 240 / 0.92);
+  font-family: var(--font-geist-sans);
+  min-height: 100vh;
+}
+
+* {
+  scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.55);
+}
